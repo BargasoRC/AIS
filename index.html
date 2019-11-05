@@ -12,44 +12,47 @@
 
 <body>
     <div id="header" class="col-md-12 shadow fixed-top">
-        <center>
-            <h3>Welcome!</h3>
-        </center>
+        <div class="col-md-12">
+            <div class="row">
+                <div class="col-md-6">
+                    <br>
+                    <h5>Event:</h5><span>Visiting Day</span>
+                </div>
+                <div class="col-md-6">
+                    <br>
+                    <h5 id="visitorsCount">No. of Visitors:</h5><span>0</span>
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- <header class="masthead"> -->
     <center>
-        <div class="search col-md-12">
-            <div id="inputField" class="col-md-12">
-                <input id="name" type="text" class="searchbtn form-control" placeholder="Search for...">
-                <span>
-                    <button id="go" class="searchbtn btn btn-default" type="button" data-toggle="modal"
-                        data-target="#myModal">Go!</button>
-                </span>
+        <div class="card">
+            <div class="card-header">
+
+            </div>
+            <div class="card-body">
+                <div class="search col-md-12">
+                    <input id="name" type="text" class="searchbtn form-control" placeholder="Search for...">
+                    <br>
+                    <button id="go" class="btn btn-default" type="button" data-toggle="modal"
+                        data-target="#myModal">GO</button>
+                </div>
             </div>
         </div>
     </center>
-    <!-- </header> -->
-    <!-- The Modal -->
     <div class="modal fade" id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
-
-                <!-- Modal Header -->
-                <div class="modal-header">  
+                <div class="modal-header">
                     <h4 class="modal-title">Modal Heading</h4>
                     <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                 </div>
-
-                <!-- Modal body -->
                 <div class="modal-body">
                     Modal body..
                 </div>
-
-                <!-- Modal footer -->
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
                 </div>
-
             </div>
         </div>
     </div>

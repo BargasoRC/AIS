@@ -3,10 +3,11 @@ body{
     margin:0;
 }
 #header{
-    height: 70px;
+    height: 300px;
     background: white;
     /* box-shadow: 5px 15px 10px -17px black; */
     box-shadow: 0px 0px 7px black;
+    z-index:1;
 }
 .masthead {
     height: 100vh;
@@ -27,4 +28,30 @@ body{
 }
 .searchbtn{
     height: 50px;
+}
+#go{
+    height:30px; 
+}
+.page-header{
+    background:black;
+    height:200px;
+}
+.card{
+    margin-top:170px;
+    z-index:2;
+    width:500px;
+}
+.card-header{
+    height:150px;
+    background:#f76ff1;
+}
+.btn-default{
+    border:2px solid #fa05ef;
+    border-radius:15px;
+    width:150px;
+    padding:0;
+    font-weight: bold;
+}
+#visitorsCount{
+    text-align: right;
 }
