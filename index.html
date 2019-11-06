@@ -14,33 +14,43 @@
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
-    <div id="header" class="col-md-12 shadow fixed-top">
+    <div id="header" class="col-md-12 shadow-sm fixed-top">
         <div id="event" class="col-md-12">
-            <div class="row">
+            <div id="navs" class="row">
                 <div class="col-md-6">
-                    <br>
-                    <p class="text-white"><b>Event: </b><span>Visiting Day</span> </p>
-                </div>
-                <div class="col-md-6">
-                    <br>
-                    <p class="text-right text-white"><b>No. of Visitors: </b><span id="visitorsCount">0</span> </p>
+                    <i id="logo" class="text-black fas fa-users"></i>
+                    <span><b id="logoText" class="text-black">Visit</b></span>
                 </div>
             </div>
         </div>
     </div>
     <center>
-        <div class="card">
+        <div class="card shadow">
             <div class="card-header">
-
+                <i id="check" class="fas fa-user-check text-white"></i>
             </div>
             <div class="card-body">
                 <div class="search col-md-12">
                     <input id="name" type="text" class="searchbtn form-control" placeholder="Search for...">
                     <br>
-                    <button id="go" class="btn btn-default" type="button" data-toggle="modal"
-                        data-target="#myModal">GO</button>
+                    <button id="go" class="btn btn-default" type="button" data-target="#myModal">GO</button>
                     <br>
                     <br>
+                    <i>updates</i><span><i class="fas fa-angle-down btn btn-link btn-link" data-toggle="collapse"
+                            href="#multiCollapseExample1" role="button" aria-expanded="false"
+                            aria-controls="multiCollapseExample1"></i></span>
+                    <div class="collapse multi-collapse" id="multiCollapseExample1">
+                        <hr>
+                        <div class="row">
+                            <div class="col-md-6 ">
+                                <p class="text-left text-black"><b>Date: </b><span>11/6/2019</span> </p>
+                            </div>
+                            <div class="col-md-6">
+                                <p class="text-right text-black"><b>No. Of Visitors: </b><span
+                                        id="visitorsCount">0</span> </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -49,46 +59,72 @@
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Name</h4>
+                    <b>
+                        <p class="modal-title">Name</p>
+                    </b>
                     <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
+                    <ul class="nav nav-pills" role="tablist">
+                        <li class="nav-item">
+                            <a class="updateDelete nav-link active text-center btn btn-outline-info" data-toggle="pill"
+                                href="#home">update</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="updateDelete nav-link text-center btn btn-outline-danger" data-toggle="pill"
+                                href="#deleteTable">delete</a>
+                        </li>
+                    </ul>
                 </div>
                 <div class="modal-body">
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                    <div class="tab-content">
+                        <div id="home" class="container tab-pane active">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                                </div>
+                                <input id="firstName" type="text" class="form-control" placeholder="First Name"
+                                    aria-label="First Name" aria-describedby="basic-addon1" value="">
+                                <span>
+                                    <input id="lastName" type="text" class="form-control" placeholder="Last Name"
+                                        aria-label="Last Name" aria-describedby="basic-addon1" value="">
+                                </span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="inputGroupSelect01"><i
+                                            class="fa fa-intersex"></i></label>
+                                </div>
+                                <select class="custom-select" id="inputGroupSelect01">
+                                    <option selected value="Male">Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                                <span>
+                                    <input id="age" type="number" class="form-control" placeholder="age"
+                                        aria-label="age" aria-describedby="basic-addon1">
+                                </span>
+                            </div>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i class="fas fa-home"></i></span>
+                                </div>
+                                <input id="Address" type="text" class="form-control" placeholder="Address"
+                                    aria-label="Address" aria-describedby="basic-addon1" value="">
+                            </div>
                         </div>
-                        <input id="firstName" type="text" class="form-control" placeholder="First Name"
-                            aria-label="First Name" aria-describedby="basic-addon1">
-                        <span>
-                            <input id="lastName" type="text" class="form-control" placeholder="Last Name"
-                                aria-label="Last Name" aria-describedby="basic-addon1">
-
-                        </span>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <label class="input-group-text" for="inputGroupSelect01"><i
-                                    class="fa fa-intersex"></i></label>
+                        <div id="deleteTable" class="container tab-pane fade"><br>
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text" id="basic-addon1"><i
+                                            class="far fa-calendar-alt"></i></span>
+                                </div>
+                                <input id="Year" type="text" class="form-control" placeholder="Year" aria-label="Year"
+                                    aria-describedby="basic-addon1">
+                            </div>
                         </div>
-                        <select class="custom-select" id="inputGroupSelect01">
-                            <option selected value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
-                        <span>
-                            <input id="age" type="number" class="form-control" placeholder="age" aria-label="age"
-                                aria-describedby="basic-addon1">
-                        </span>
-                    </div>
-                    <div class="input-group mb-3">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-home"></i></span>
-                        </div>
-                        <input id="Address" type="text" class="form-control" placeholder="Address"
-                            aria-label="Address" aria-describedby="basic-addon1">
                     </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button id="save" type="button" class="btn btn-outline-success">save</button>
+                    <button id="close" type="button" class="btn btn-outline-danger" data-dismiss="modal">close</button>
                 </div>
             </div>
         </div>
