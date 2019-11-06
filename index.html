@@ -7,20 +7,23 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css"
+        integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <link rel="stylesheet" type="text/css" href="style.css">
 
 <body>
     <div id="header" class="col-md-12 shadow fixed-top">
-        <div class="col-md-12">
+        <div id="event" class="col-md-12">
             <div class="row">
                 <div class="col-md-6">
                     <br>
-                    <p>Event: <span>Visiting Day</span> </p>
+                    <p class="text-white"><b>Event: </b><span>Visiting Day</span> </p>
                 </div>
                 <div class="col-md-6">
                     <br>
-                    <p id="visitorsCount">No. of Visitors: <span>0</span> </p>
+                    <p class="text-right text-white"><b>No. of Visitors: </b><span id="visitorsCount">0</span> </p>
                 </div>
             </div>
         </div>
@@ -36,19 +39,53 @@
                     <br>
                     <button id="go" class="btn btn-default" type="button" data-toggle="modal"
                         data-target="#myModal">GO</button>
+                    <br>
+                    <br>
                 </div>
             </div>
         </div>
     </center>
-    <div class="modal fade" id="myModal">
+    <div class="modal fade " id="myModal">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
+                    <h4 class="modal-title">Name</h4>
                     <!-- <button type="button" class="close" data-dismiss="modal">&times;</button> -->
                 </div>
                 <div class="modal-body">
-                    Modal body..
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-user"></i></span>
+                        </div>
+                        <input id="firstName" type="text" class="form-control" placeholder="First Name"
+                            aria-label="First Name" aria-describedby="basic-addon1">
+                        <span>
+                            <input id="lastName" type="text" class="form-control" placeholder="Last Name"
+                                aria-label="Last Name" aria-describedby="basic-addon1">
+
+                        </span>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <label class="input-group-text" for="inputGroupSelect01"><i
+                                    class="fa fa-intersex"></i></label>
+                        </div>
+                        <select class="custom-select" id="inputGroupSelect01">
+                            <option selected value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                        <span>
+                            <input id="age" type="number" class="form-control" placeholder="age" aria-label="age"
+                                aria-describedby="basic-addon1">
+                        </span>
+                    </div>
+                    <div class="input-group mb-3">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text" id="basic-addon1"><i class="fas fa-home"></i></span>
+                        </div>
+                        <input id="Address" type="text" class="form-control" placeholder="Address"
+                            aria-label="Address" aria-describedby="basic-addon1">
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
