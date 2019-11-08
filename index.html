@@ -11,10 +11,10 @@
         integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="./style.css">
 
 <body>
-    <div id="header" class="col-md-12 shadow-sm fixed-top">
+    <div id="header" class="col-md-12 shadow-sm">
         <div id="event" class="col-md-12">
             <div id="navs" class="row">
                 <div class="col-md-6">
@@ -25,15 +25,16 @@
         </div>
     </div>
     <center>
-        <div class="card shadow">
+        <div class="card">
             <div class="card-header">
                 <i id="check" class="fas fa-user-check text-white"></i>
             </div>
             <div class="card-body">
                 <div class="search col-md-12">
-                    <input id="name" type="text" class="searchbtn form-control" placeholder="Search for...">
+                    <input id="name" type="text" class="searchbtn form-control" placeholder="Search for...Lastname, Firstname">
                     <br>
-                    <button id="go" class="btn btn-default" type="button" data-toggle="modal" data-target="#myModal">GO</button>
+                    <button id="go" class="btn btn-default" type="button" data-toggle="modal"
+                        data-target="#myModal">GO</button>
                     <br>
                     <br>
                     <i>updates</i><span><i class="fas fa-angle-down btn btn-link btn-link" data-toggle="collapse"
@@ -55,7 +56,7 @@
             </div>
         </div>
     </center>
-    <div class="modal fade " id="myModal" class="modal hide" data-backdrop="static" data-keyboard="false">
+    <div class="modal fade center" id="myModal" class="modal hide" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -64,15 +65,15 @@
                     </b>
                     <ul class="nav nav-pills" role="tablist">
                         <li class="nav-item">
-                            <a class="updateDelete nav-link active text-center btn btn-outline-success" data-toggle="pill"
-                                href="#home">add visitor</a>
+                            <a class="updateDelete nav-link active text-center btn btn-outline-info"
+                                data-toggle="pill" href="#home">add visitor</a>
                         </li>
                         <li class="nav-item">
                             <a class="updateDelete nav-link text-center btn btn-outline-info" data-toggle="pill"
                                 href="#update">update</a>
                         </li>
                         <li class="nav-item">
-                            <a class="updateDelete nav-link text-center btn btn-outline-danger" data-toggle="pill"
+                            <a class="updateDelete nav-link text-center btn btn-outline-info" data-toggle="pill"
                                 href="#deleteTable">delete</a>
                         </li>
                     </ul>
@@ -116,21 +117,29 @@
                         <div id="update" class="container tab-pane fade"><br>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i
+                                    <label class="input-group-text" id="updateYear"><i
                                             class="far fa-calendar-alt"></i></span>
                                 </div>
-                                <input id="Year" type="text" class="form-control" placeholder="Year" aria-label="Year"
-                                    aria-describedby="basic-addon1">
+                                <select class="custom-select" id="updateYear">
+                                    <option selected value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                </select>
                             </div>
                         </div>
                         <div id="deleteTable" class="container tab-pane fade"><br>
                             <div class="input-group mb-3">
                                 <div class="input-group-prepend">
-                                    <span class="input-group-text" id="basic-addon1"><i
+                                    <label class="input-group-text" id="deleteYear"><i
                                             class="far fa-calendar-alt"></i></span>
                                 </div>
-                                <input id="Year" type="text" class="form-control" placeholder="Year" aria-label="Year"
-                                    aria-describedby="basic-addon1">
+                                <select class="custom-select" id="deleteYear">
+                                    <option selected value="2019">2019</option>
+                                    <option value="2018">2018</option>
+                                    <option value="2017">2017</option>
+                                    <option value="2016">2016</option>
+                                </select>
                             </div>
                         </div>
                     </div>

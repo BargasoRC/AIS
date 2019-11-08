@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/futureCode16/AIS/issues"
   },
-  "homepage": "https://github.com/futureCode16/AIS#readme"
+  "homepage": "https://github.com/futureCode16/AIS#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
 }
