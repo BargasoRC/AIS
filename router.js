@@ -10,7 +10,9 @@ app.all('/', function(req, res){
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
-app.all()
+app.all('/create',(req,res)=>{
+    
+})
 // app.all('/enroll', function(req, res){
 //     Enroll.enroll(req,res);
 // });
