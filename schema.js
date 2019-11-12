@@ -8,7 +8,8 @@ var visit = new Schema({
     },
     age: Number,
     gender: String,
-    address: String
+    address: String,
+    visitors:[]
 }, {
     collection: 'visitors'
 }
