@@ -1,9 +1,11 @@
+const mongoose = require('mongoose');
 let models = require("./schema");
 let response = require("./helper")
 
-module.exports = function(student,visitor, res) {
-    console.log(student)
-    console.log(visitor)
+module.exports = function(student,add, res) {
+    var id = mongoose.Types.ObjectId();
+    var visitor = add;
+    visitor.id = id;
     models.Visitors.update({name: student},{$push:{visitors: visitor}}, (err,callback) => {
         response.error = false;
         response.status = 200;

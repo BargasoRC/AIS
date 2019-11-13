@@ -2,7 +2,6 @@ let models = require("./schema");
 
 module.exports = function(student, res) {
     models.Visitors.findOne({name:student}, (err, visitors) => {
-        console.log(visitors)
         if(visitors !== null){
             res.send({exists:true})
         }else{

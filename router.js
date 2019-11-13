@@ -30,7 +30,7 @@ app.post('/add',function(req,res){
 })
 
 app.put('/update/:id',function(req,res){
-    update(req.params.id,req.query,res);
+    update(req.params.id,req.body,res);
 })
 
 app.get('/retrieve-all',function(req,res){
