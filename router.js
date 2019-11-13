@@ -3,11 +3,13 @@ var router = express.Router();
 var app = express();
 var port = 8080;
 var path = require('path');
-var bodyParser = require('body-parser')
+var bodyParser = require('body-parser');
 var http = require('http').Server(app);
 var retrieve = require('./retrieve');
 var check = require('./check');
 var add = require('./addVisitor');
+var retrieveAll = require('./all');
+var update = require('./update');
 
 require('./db')
 
@@ -25,6 +27,14 @@ app.get('/checking', function (req, res) {
 
 app.post('/add',function(req,res){
     add(req.body.student,req.body.visitor,res)
+})
+
+app.put('/update/:id',function(req,res){
+    update(req.params.id,req.query,res);
+})
+
+app.get('/retrieve-all',function(req,res){
+    retrieveAll(req,res);
 })
 
 app.get('/retrieve/:student', (req, res) => {

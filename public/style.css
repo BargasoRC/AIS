@@ -39,14 +39,14 @@ body{
     height:150px;
     background:#82015b;
 }
-.btn-default, #close, #save{
+.btn-default, #close, #save, #updateClose{
     border:2px solid #fa05ef;
     border-radius:15px;
     width:150px;
     padding:0;
     font-weight: bold;
 }
-#close{
+#close, #updateClose{
     border:1px solid red;
     width:100px;
 }
@@ -83,4 +83,7 @@ body{
 #check{
     font-size: 100px;
     padding:10px;
+}
+#table{
+    display:none;
 }

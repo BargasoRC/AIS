@@ -1,13 +1,11 @@
 let models = require("./schema");
-let response = require("./helper")
+let response = require("./helper");
 
-module.exports = function(student,visitor, res) {
-    console.log(student)
-    console.log(visitor)
-    models.Visitors.update({name: student},{$push:{visitors: visitor}}, (err,callback) => {
+module.exports = function(req, res) {
+    models.Visitors.find({}, (err, visitors) => {
         response.error = false;
         response.status = 200;
-        response.data.body = callback
+        response.data.body = visitors;
         res.send(response)
     }).catch(err => {
         if (err) {
