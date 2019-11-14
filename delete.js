@@ -2,11 +2,11 @@ let models = require("./schema");
 let response = require("./helper");
 var ObjectId = require('mongodb').ObjectID;
 
-module.exports = function(id,data, res) {
-    models.Visitors.findOneAndUpdate({'_id':ObjectId(id),'visitors.id':ObjectId(data.id)},{$set:{'visitors.$':data}}, (err, result) => {
+module.exports = function(studentId,id, res) {
+    models.Visitors.updateMany({'_id':ObjectId(studentId)}, { $pull: { visitors:{"id":ObjectId(id)} }},{ safe: true, multi:true }, (err, result) => {
         response.error = false;
         response.status = 200;
-        response.data.body = data;
+        response.data.body = result;
         res.send(response)
     }).catch(err => {
         if (err) {

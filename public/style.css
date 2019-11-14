@@ -39,7 +39,7 @@ body{
     height:150px;
     background:#82015b;
 }
-.btn-default, #close, #save, #updateClose{
+.btn-default, #close, #save, #updateClose, #updateSave{
     border:2px solid #fa05ef;
     border-radius:15px;
     width:150px;
