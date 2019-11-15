@@ -46,6 +46,12 @@ $(document).ready(function () {
       var body = res.data.body;
       var update = '<button id="tableUpdate" type="button" class="btn btn-outline-primary">update</button>';
       var Delete = '<button id="tabledelete"type="button" class="btn btn-outline-danger">delete</button>';
+      if($("table tbody tr").length >=1){
+        for(var i = 0; i < $("table tbody tr").length; ++i){
+          $("table tbody tr").remove();
+        }
+      }
+
       for (var i = 0; i < body.length; ++i) {
         for (var x = 0; x < body[i].visitors.length; ++x) {
           if (body[i].visitors.length !== 0) {
@@ -63,6 +69,8 @@ $(document).ready(function () {
           }
         }
       }
+      console.log($("table tbody tr").length)
+
     });
   })
 
@@ -77,7 +85,6 @@ $(document).ready(function () {
       if (res.data.body.nModified === 1) {
         $('#' + a).remove();
       }
-
     })
   });
 
@@ -119,7 +126,9 @@ $(document).ready(function () {
     var address = $('#Address').val();
     let requestUrl = 'http://localhost:8080/add';
     let method = 'PUT'
-    var visitors = { 'firstname': firstName, 'lastname': lastName, 'age': age, 'gender': gender, 'address': address };
+    var visitors = { 'firstname': firstName, 'lastname': lastName, 'age': age, 'gender': gender, 'address': address, 'date':moment().format('MMMM Do YYYY, h:mm:ss a')};
+
+    console.log(moment().format('MMMM Do YYYY, h:mm:ss a'))
 
     let data = { student: studentData, visitor: visitors };
 

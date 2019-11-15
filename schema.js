@@ -17,7 +17,8 @@ var visit = new Schema({
             lastname:{type:String,required:true,unique:false},
             age:{type:Number, unique:false},
             gender:{type:String, unique:false},
-            address:{type:String, unique:false}
+            address:{type:String, unique:false},
+            date:{type:String, unique:false}
         }
     ]
 }, {
