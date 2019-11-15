@@ -61,31 +61,34 @@
             </div>
         </div>
     </center>
-    <br>
-    <br>
-    <br>
     <div id="table" class="container-fluid">
-        <div class="col-md-12">
-            <div class="row">
-                <table class="table table-hover">
-                    <thead>
-                        <tr>
-                            <th scope="col">Student Name</th>
-                            <th scope="col">Last Name</th>
-                            <th scope="col">First Name</th>
-                            <th scope="col">Age</th>
-                            <th scope="col">Gender</th>
-                            <th scope="col">Address</th>
-                            <th scope="col">Update</th>
-                            <th scope="col">Delete</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                    </tbody>
-                </table>
+        <div id="card" class="card overflow-auto" style="width:100%;height:500px;">
+            <div class="card-body">
+                <div class="col-md-12">
+                    <div class="row">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Student Name</th>
+                                    <th scope="col">Last Name</th>
+                                    <th scope="col">First Name</th>
+                                    <th scope="col">Age</th>
+                                    <th scope="col">Gender</th>
+                                    <th scope="col">Address</th>
+                                    <th scope="col">Update</th>
+                                    <th scope="col">Delete</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
+    <br>
+    <br>
     <div class="modal fade center hide" id="updateModal" data-backdrop="static" data-keyboard="false">
         <div class="modal-dialog">
             <div class="modal-content">
@@ -144,20 +147,6 @@
                     <b>
                         <p id="modalName" class="modal-title">Name</p>
                     </b>
-                    <ul class="nav nav-pills" role="tablist">
-                        <li class="nav-item">
-                            <a class="updateDelete nav-link active text-center btn btn-outline-info" data-toggle="pill"
-                                href="#home">add visitor</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="updateDelete nav-link text-center btn btn-outline-info" data-toggle="pill"
-                                href="#update">update</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="updateDelete nav-link text-center btn btn-outline-info" data-toggle="pill"
-                                href="#deleteTable">delete</a>
-                        </li>
-                    </ul>
                 </div>
                 <div class="modal-body">
                     <div class="tab-content">
@@ -194,44 +183,16 @@
                                     aria-label="Address" aria-describedby="basic-addon1" value="">
                             </div>
                         </div>
-                        <div id="update" class="container tab-pane fade"><br>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" id="updateYear"><i
-                                            class="far fa-calendar-alt"></i></span>
-                                </div>
-                                <select class="custom-select" id="updateYear">
-                                    <option selected value="2019">2019</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2017">2017</option>
-                                    <option value="2016">2016</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div id="deleteTable" class="container tab-pane fade"><br>
-                            <div class="input-group mb-3">
-                                <div class="input-group-prepend">
-                                    <label class="input-group-text" id="deleteYear"><i
-                                            class="far fa-calendar-alt"></i></span>
-                                </div>
-                                <select class="custom-select" id="deleteYear">
-                                    <option selected value="2019">2019</option>
-                                    <option value="2018">2018</option>
-                                    <option value="2017">2017</option>
-                                    <option value="2016">2016</option>
-                                </select>
-                            </div>
-                        </div>
                     </div>
-                </div>
-                <div class="modal-footer">
-                    <button id="save" type="button" class="btn btn-outline-success">save</button>
-                    <button id="close" type="button" class="btn btn-outline-danger" data-dismiss="modal">close</button>
+                    <div class="modal-footer">
+                        <button id="save" type="button" class="btn btn-outline-success">save</button>
+                        <button id="close" type="button" class="btn btn-outline-danger"
+                            data-dismiss="modal">close</button>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-    <script src="script.js"></script>
+        <script src="script.js"></script>
 </body>
 
 </html>

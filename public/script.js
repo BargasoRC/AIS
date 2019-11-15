@@ -69,8 +69,6 @@ $(document).ready(function () {
           }
         }
       }
-      console.log($("table tbody tr").length)
-
     });
   })
 
@@ -133,7 +131,10 @@ $(document).ready(function () {
     let data = { student: studentData, visitor: visitors };
 
     apiRequest(requestUrl, data, method).then(res => {
-      console.log(res)
+      swal({
+        icon: "success",
+        text: "Visitor has been added!"
+      });
     });
   })
 
